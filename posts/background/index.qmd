@@ -1,0 +1,30 @@
+---
+title: "I Am A Bad Coder"
+subtitle: And I want to change it
+description: In this post I talk briefly about how losing touch with coding has effected my coding skills and how I am planning to re-learn it.  
+author: "Abdullah Zeeshan"
+date: "2023-06-20"
+categories: [announcement]
+reading-time: True
+toc: true
+fig-align: center
+fig-cap-location: bottom
+---
+
+![](bad_coder.jpg)
+
+I learnt coding and Python almost a year ago as part of my college course. It was a lot of fun. They key advice that my professor had given back then was, "Think of what you want to do next and keep working on projects!", an advice that I regeret not taking. Months went by and coding drifted away from my life. I was not a regular coder and never really coded every single day for the past few months. This has resulted in a lot of gaps in my skills and at times I forget basic Python syntax. I Google stuff and try make things work in a very shallow manner.
+
+As part of learning deep learning through the [fast.ai](https://fast.ai) course, I realized all these gaps. Most of the time, I struggled a lot reading and understanding Python code.
+
+## I want to change this!
+
+I have decided to work on my coding and Python skills by re-learning it. Once I do that, I want to build a daily habit where I code every single day for atleast 2 hours to keep my skills sharp!
+
+On this site, I document all of that. 
+
+## From Where Am I Re-Learning
+
+I have decided to repeat my college Python course. It was really great and I loved it. A hands-on approach blended with problem solving.
+
+Apart from that I have some other books and resources that I will use. Will keep updated here as I go along.   
