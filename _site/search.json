@@ -1,45 +1,10 @@
 [
   {
-    "objectID": "posts/background/index.html",
-    "href": "posts/background/index.html",
-    "title": "I Am A Bad Coder",
-    "section": "",
-    "text": "I learnt coding and Python almost a year ago as part of my college course. It was a lot of fun. They key advice that my professor had given back then was, “Think of what you want to do next and keep working on projects!”, an advice that I regeret not taking. Months went by and coding drifted away from my life. I was not a regular coder and never really coded every single day for the past few months. This has resulted in a lot of gaps in my skills and at times I forget basic Python syntax. I Google stuff and try make things work in a very shallow manner.\nAs part of learning deep learning through the fast.ai course, I realized all these gaps. Most of the time, I struggled a lot reading and understanding Python code."
-  },
-  {
-    "objectID": "posts/background/index.html#i-want-to-change-this",
-    "href": "posts/background/index.html#i-want-to-change-this",
-    "title": "I Am A Bad Coder",
-    "section": "I want to change this!",
-    "text": "I want to change this!\nI have decided to work on my coding and Python skills by re-learning it. Once I do that, I want to build a daily habit where I code every single day for atleast 2 hours to keep my skills sharp!\nOn this site, I document all of that."
-  },
-  {
-    "objectID": "posts/background/index.html#from-where-am-i-re-learning",
-    "href": "posts/background/index.html#from-where-am-i-re-learning",
-    "title": "I Am A Bad Coder",
-    "section": "From Where Am I Re-Learning",
-    "text": "From Where Am I Re-Learning\nI have decided to repeat my college Python course. It was really great and I loved it. A hands-on approach blended with problem solving.\nApart from that I have some other books and resources that I will use. Will keep updated here as I go along."
-  },
-  {
-    "objectID": "notes.html",
-    "href": "notes.html",
-    "title": "",
-    "section": "",
-    "text": "Back to top"
-  },
-  {
     "objectID": "posts/print/index.html",
     "href": "posts/print/index.html",
     "title": "Playing With The print Command",
     "section": "",
     "text": "Let me begin my first Python code, the classical hello, world program.\nprint('hello, world')\n\nhello, world\nWhat is happening here?!\nSeems like whatever I type, inside the single quotes '', the computer outputs that exact thing.\nLet me try some other stuff.\nprint('Namasthey India')\n\nNamasthey India\nprint('My name is Zeeshan.')\n\nMy name is Zeeshan.\nDo I really need those single quotes?!\nLet me try!\nprint(Message without quotes)\n\nSyntaxError: ignored\nOops! Looks like I do need those quotes. Let us keep them.\nprint('I am sorry! I will put you back here.')\n\nI am sorry! I will put you back here.\nWorks well."
-  },
-  {
-    "objectID": "posts/print/index.html#hello-world",
-    "href": "posts/print/index.html#hello-world",
-    "title": "Playing With The print Command",
-    "section": "",
-    "text": "Let me begin my first Python code, the classical hello, world program.\n\nprint('hello, world')\n\nhello, world\n\n\nWhat is happening here?!\nSeems like whatever I type, inside the single quotes '', the computer outputs that exact thing.\nLet me try some other stuff.\n\nprint('Namasthey India')\n\nNamasthey India\n\n\n\nprint('My name is Zeeshan.')\n\nMy name is Zeeshan.\n\n\nDo I really need those single quotes?!\nLet me try!\n\nprint(Message without quotes)\n\nSyntaxError: ignored\n\n\nOops! Looks like I do need those quotes. Let us keep them.\n\nprint('I am sorry! I will put you back here.')\n\nI am sorry! I will put you back here.\n\n\nWorks well."
   },
   {
     "objectID": "posts/print/index.html#multiple-lines",
@@ -131,5 +96,33 @@
     "title": "Playing With The print Command",
     "section": "Emojis",
     "text": "Emojis\nLet me wrap my print() adventures with some emojis.\nHere is how I can display emojis:\n\nprint('\\N{grinning face}')\n\n😀\n\n\n\nprint('\\N{smiling face with halo}')\n\n😇\n\n\n\nprint(\"\\N{see-no-evil monkey}\")\n\n🙈\n\n\n\nprint(\"\\N{tent}\")\n\n⛺\n\n\n\nprint(\"I need a\", \"\\N{taxi}\")\n\nI need a 🚕\n\n\n\nprint('\\N{snowman}')\n\n☃\n\n\nHere is a list of all emojis. I inserted the descriptions mentioned in CLDR Short Name column. Some stuff didn’t seem to work.\n\nprint(\"That's a wrap!\", \"\\N{eyes}\")\n\nThat's a wrap! 👀"
+  },
+  {
+    "objectID": "posts/background/index.html",
+    "href": "posts/background/index.html",
+    "title": "I Am A Bad Coder",
+    "section": "",
+    "text": "I learnt coding and Python almost a year ago as part of my college course. It was a lot of fun. They key advice that my professor had given back then was, “Think of what you want to do next and keep working on projects!”, an advice that I regeret not taking. Months went by and coding drifted away from my life. I was not a regular coder and never really coded every single day for the past few months. This has resulted in a lot of gaps in my skills and at times I forget basic Python syntax. I Google stuff and try make things work in a very shallow manner.\nAs part of learning deep learning through the fast.ai course, I realized all these gaps. Most of the time, I struggled a lot reading and understanding Python code."
+  },
+  {
+    "objectID": "posts/background/index.html#i-want-to-change-this",
+    "href": "posts/background/index.html#i-want-to-change-this",
+    "title": "I Am A Bad Coder",
+    "section": "I want to change this!",
+    "text": "I want to change this!\nI have decided to work on my coding and Python skills by re-learning it. Once I do that, I want to build a daily habit where I code every single day for atleast 2 hours to keep my skills sharp!\nOn this site, I document all of that."
+  },
+  {
+    "objectID": "posts/background/index.html#from-where-am-i-re-learning",
+    "href": "posts/background/index.html#from-where-am-i-re-learning",
+    "title": "I Am A Bad Coder",
+    "section": "From Where Am I Re-Learning",
+    "text": "From Where Am I Re-Learning\nI have decided to repeat my college Python course. It was really great and I loved it. A hands-on approach blended with problem solving.\nApart from that I have some other books and resources that I will use. Will keep updated here as I go along."
+  },
+  {
+    "objectID": "notes.html",
+    "href": "notes.html",
+    "title": "",
+    "section": "",
+    "text": "Back to top"
   }
 ]

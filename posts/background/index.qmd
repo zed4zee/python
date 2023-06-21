@@ -1,6 +1,6 @@
 ---
 title: "I Am A Bad Coder"
-subtitle: And I want to change it
+subtitle: And I want to do something about it
 description: In this post I talk briefly about how losing touch with coding has effected my coding skills and how I am planning to re-learn it.  
 author: "Abdullah Zeeshan"
 date: "2023-06-20"
@@ -23,8 +23,18 @@ I have decided to work on my coding and Python skills by re-learning it. Once I 
 
 On this site, I document all of that. 
 
-## From Where Am I Re-Learning
+## My Plan
 
-I have decided to repeat my college Python course. It was really great and I loved it. A hands-on approach blended with problem solving.
+### Phase 1
 
-Apart from that I have some other books and resources that I will use. Will keep updated here as I go along.   
+In the first phase I have decided to repeat my college Python course. It was really great and I loved it. It was highly practical. A hands-on style blended with problem solving.
+ 
+The course was like this function, a black magic box. You go inside as a non-coder, and come out with brilliant skills.
+
+All I did was go through the lectures, by firing up an IDE on the side, and coding as I went along. I coded for 3 months and after that I could see the changes.
+
+So I will go through this process again.
+
+### Phase 2 & Beyond
+
+Once I am done with it, the next step would be to become a pro. Will keep updated on what to do as I go along. There are some advanced coding courses and books that I might pick and do at this stage, do some projects, etc. Or maybe the PDLC course will help me improve as I do deep learning. Let me plan this then.   
