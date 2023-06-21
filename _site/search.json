@@ -19,5 +19,117 @@
     "title": "I Am A Bad Coder",
     "section": "From Where Am I Re-Learning",
     "text": "From Where Am I Re-Learning\nI have decided to repeat my college Python course. It was really great and I loved it. A hands-on approach blended with problem solving.\nApart from that I have some other books and resources that I will use. Will keep updated here as I go along."
+  },
+  {
+    "objectID": "notes.html",
+    "href": "notes.html",
+    "title": "",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "posts/print/index.html",
+    "href": "posts/print/index.html",
+    "title": "Playing With The print Command",
+    "section": "",
+    "text": "Let me begin my first Python code, the classical hello, world program.\nprint('hello, world')\n\nhello, world\nWhat is happening here?!\nSeems like whatever I type, inside the single quotes '', the computer outputs that exact thing.\nLet me try some other stuff.\nprint('Namasthey India')\n\nNamasthey India\nprint('My name is Zeeshan.')\n\nMy name is Zeeshan.\nDo I really need those single quotes?!\nLet me try!\nprint(Message without quotes)\n\nSyntaxError: ignored\nOops! Looks like I do need those quotes. Let us keep them.\nprint('I am sorry! I will put you back here.')\n\nI am sorry! I will put you back here.\nWorks well."
+  },
+  {
+    "objectID": "posts/print/index.html#hello-world",
+    "href": "posts/print/index.html#hello-world",
+    "title": "Playing With The print Command",
+    "section": "",
+    "text": "Let me begin my first Python code, the classical hello, world program.\n\nprint('hello, world')\n\nhello, world\n\n\nWhat is happening here?!\nSeems like whatever I type, inside the single quotes '', the computer outputs that exact thing.\nLet me try some other stuff.\n\nprint('Namasthey India')\n\nNamasthey India\n\n\n\nprint('My name is Zeeshan.')\n\nMy name is Zeeshan.\n\n\nDo I really need those single quotes?!\nLet me try!\n\nprint(Message without quotes)\n\nSyntaxError: ignored\n\n\nOops! Looks like I do need those quotes. Let us keep them.\n\nprint('I am sorry! I will put you back here.')\n\nI am sorry! I will put you back here.\n\n\nWorks well."
+  },
+  {
+    "objectID": "posts/print/index.html#multiple-lines",
+    "href": "posts/print/index.html#multiple-lines",
+    "title": "Playing With The print Command",
+    "section": "Multiple Lines",
+    "text": "Multiple Lines\nLet me try multiple lines.\n\nprint('This is the first line.')\nprint('This is the second line.')\n\nThis is the first line.\nThis is the second line.\n\n\nIt outputs stuff on a new line. Nice!"
+  },
+  {
+    "objectID": "posts/print/index.html#can-pass-pretty-much-anything",
+    "href": "posts/print/index.html#can-pass-pretty-much-anything",
+    "title": "Playing With The print Command",
+    "section": "Can Pass Pretty Much Anything",
+    "text": "Can Pass Pretty Much Anything\nLet me try printing gibberish characters from the keyboard.\n\nprint('fhiuerdjn?&gt;&lt;:{}djhrj%^&*GHYUh^*&^%$%^&&lt;&gt;:{}}|~!@')\n\nfhiuerdjn?&gt;&lt;:{}djhrj%^&*GHYUh^*&^%$%^&&lt;&gt;:{}}|~!@\n\n\nSeems all great! What else, can I ask it to print?! Let me try numbers."
+  },
+  {
+    "objectID": "posts/print/index.html#numbers",
+    "href": "posts/print/index.html#numbers",
+    "title": "Playing With The print Command",
+    "section": "Numbers",
+    "text": "Numbers\n\nprint('10')\n\n10\n\n\nWorks well! Do I need the quotes?!\n\nprint(10)\n\n10\n\n\nYay! Looks like I don’t!\nFor letters and other characters, it needs quotes, but for numbers it works fine with and without quotes.\nThere must be a difference though. Infact there is, I know there is, because this is not the first time I am doing this. Let me explore this ahead.\nSo, it is returning numbers as well. All types of numbers?! Let me try. I shall stick with not using quotes for numbers.\n\nIntegers\n\nprint(25)\n\n25\n\n\n\nprint(113457580)\n\n113457580\n\n\n\nprint(-7)\n\n-7\n\n\n\nprint(0)\n\n0\n\n\n\n\nDecimals\n\nprint(3.67)\n\n3.67\n\n\n\nprint(-132841.67875654)\n\n-132841.67875654\n\n\nSeems like it. I can display both integers as well as decimals.\nLet me try something new now."
+  },
+  {
+    "objectID": "posts/print/index.html#stair-pattern",
+    "href": "posts/print/index.html#stair-pattern",
+    "title": "Playing With The print Command",
+    "section": "Stair Pattern",
+    "text": "Stair Pattern\n\nprint('*')\nprint('**')\nprint('***')\nprint('****')\nprint('*****')\nprint('******')\nprint('*******')\nprint('********')\nprint('*********')\nprint('**********')\n\n*\n**\n***\n****\n*****\n******\n*******\n********\n*********\n**********\n\n\nI have displayed a beautiful staircase, taking advantage of the fact that a print statement when used on a new line, outputs stuff in the new line.\n\nComputers Are Dumb\nWhen I code, I have to implicitly tell the exact things the computer must do. Like humans, it can not assume to do the tasks.\nThere are many examples for this. Let me take the one that I already explored above.\nI in my mind wanted to output the lines with a consecutive number of steps. If there was a human infront of me and if I had by mistake put 6 stars in line 5 instead of 5 stars, s/he would correct us. But computers would not care less and output what we had put exactly, i.e., 6 stars.\n\nprint('*')\nprint('**')\nprint('***')\nprint('****')\nprint('******')\n\n*\n**\n***\n****\n******\n\n\nYou see, this dumb machine has displayed the exact thing I asked for."
+  },
+  {
+    "objectID": "posts/print/index.html#reverse-stair-case",
+    "href": "posts/print/index.html#reverse-stair-case",
+    "title": "Playing With The print Command",
+    "section": "Reverse Stair Case",
+    "text": "Reverse Stair Case\nIf I wish to display the above staircase in the reverse order, it would be a challenge.\n\nprint('   *')\nprint('  **')\nprint(' ***')\nprint('****')\n\n   *\n  **\n ***\n****\n\n\nIf I want to add more lines, then I would have to shift the spaces in all the previous lines."
+  },
+  {
+    "objectID": "posts/print/index.html#on-automation",
+    "href": "posts/print/index.html#on-automation",
+    "title": "Playing With The print Command",
+    "section": "On Automation",
+    "text": "On Automation\nRegardless, of the struggle I faced in displaying the staircase in the reverse order, it would be better to display the above 2 patterns in an automated fashion, instead of typing line-by-line.\nI shall explore this ahead! Let me take a step back and examine this print() thingy I have been toying around with."
+  },
+  {
+    "objectID": "posts/print/index.html#a-closer-look-at-print",
+    "href": "posts/print/index.html#a-closer-look-at-print",
+    "title": "Playing With The print Command",
+    "section": "A Closer Look At print()",
+    "text": "A Closer Look At print()\nprint is a built-in function in Python. A function is something that takes an input, processes it, and returns an output. Built-in function means, a function that is provided by Python. These can readily used by us.\nI am passing an input, something like, hello, world to my built-in function. It processes it and returns the output, hello, world. In a way this this function’s task is to return the exact same thing I pass it. And that is what it was doing above.\nThe object inside the parenthesis hello, world is called a string. In order to pass a string, I need to put it inside quotes, 'hello, world'. In order to pass numbers, I need need not pass it in quotes. I can pass in the bare number 10 like print(10). If I pass a number with the quotes, like print('10'), I didn’t get an error, it is just that the computer will treat it as a string but not as a number.\n\nprint(10)\n\n10\n\n\n\nprint('10')\n\n10\n\n\nThough both look the same, it is different from the POV of the computer. I will look into this in detail ahead."
+  },
+  {
+    "objectID": "posts/print/index.html#double-quotes-hello-vs-single-quotes-hello",
+    "href": "posts/print/index.html#double-quotes-hello-vs-single-quotes-hello",
+    "title": "Playing With The print Command",
+    "section": "Double Quotes \"hello\" VS Single Quotes 'hello'",
+    "text": "Double Quotes \"hello\" VS Single Quotes 'hello'\nI have used single quotes ealier when including a string.\nLet me try and see if I can use a double quotes.\n\nprint(\"hello, world\")\n\nhello, world\n\n\nIt works!\n\nprint('hello, world')\n\nhello, world\n\n\nBoth works.\nSeems that the print() command is flexible with the quotes.\nThe only requirement is that I must use the same quotes for opening and closing. If I open a string with a single quote, I must close it with a single quote, but not a double quote, and vice-versa.\n\nprint('Hi\")\n\nSyntaxError: ignored\n\n\n\nprint(\"Hi')\n\nSyntaxError: ignored\n\n\n\nWhen To Use What?\nThe interpreter is essentially equipping me with the ability to use both single quotes and double quotes. This can be handy in the following situations.\nExample 1: Printing a string that has an apostrophe in it like India's capital is New Delhi.\nLet me try printing India's capital is New Delhi. as follows first:\n\nprint('India's capital is New Delhi!')\n\nSyntaxError: ignored\n\n\nThrows an error. If I do the following:\n\nprint(\"India's capital is New Delhi!\")\n\nIndia's capital is New Delhi!\n\n\nIt works well.\nLooks like if my string has an apostrophe, I can’t use single quotes. I must use double quotes.\nExample 2: Print the sentence He said, \"If people close their eyes, they can not see!\".\nClearly from my previous experience, I can not enclose this in double quotes as it already has double quotes.\n\nprint(\"He said, \"If people close their eyes, they can not see!\".\")\n\nSyntaxError: ignored\n\n\nSee I told you! Why do you make me do this?!\nLet me try single quotes.\n\nprint('He said, \"If people close their eyes, they can not see!\".')\n\nHe said, \"If people close their eyes, they can not see!\".\n\n\nWorks like a charm!\nSo I get the idea now. Here are the rules:\n\nIf a string has ', it should be enclosed in \"\" (double quotes).\nIf a string has \", it should be enclosed in '' (single quotes).\n\nWhat if I mix up stuff?! What if I want to print Hello there, I have a lil' surprise for you. A \"sword\"!\n\nprint('Hello there, I have a lil' surprise for you. A \"sword\"!')\n\nSyntaxError: ignored\n\n\n\nprint(\"Hello there, I have a lil' surprise for you. A \"sword\"!\")\n\nSyntaxError: ignored\n\n\nNothing works. Let me look into this later."
+  },
+  {
+    "objectID": "posts/print/index.html#miscellaneous-stuff",
+    "href": "posts/print/index.html#miscellaneous-stuff",
+    "title": "Playing With The print Command",
+    "section": "Miscellaneous Stuff",
+    "text": "Miscellaneous Stuff\nWhat if I pass nothing inside our print() command?!\n\nprint()\n\n\n\n\nNothing happens, it is printing a blank line.\nWhat if I type something like the following:\n\nprint\n\n&lt;function print&gt;\n\n\nIt is not showing an error, but is telling me that print is a function.\nLet me try the following now:\n\nprint 'hello, world'\n\nSyntaxError: ignored\n\n\nI am getting an error. called SyntaxError.\nA syntax is like grammar in human languages. In the above code, since I have missed the parentheses, it is telling me about it.\nBy it, I mean the interpreter here. An interpreter is something that converts my code into machine code. Will explore this later ahead."
+  },
+  {
+    "objectID": "posts/print/index.html#using-two-or-more-strings-within-a-single-print-command",
+    "href": "posts/print/index.html#using-two-or-more-strings-within-a-single-print-command",
+    "title": "Playing With The print Command",
+    "section": "Using Two Or More Strings Within A Single Print Command",
+    "text": "Using Two Or More Strings Within A Single Print Command\nI can insert multiple strings inside a single print command by separating each of them with a ,(comma). Look at the following:\n\nprint(\"hello\", \"world\")\n\nhello world\n\n\n\nprint(\"Hey\", \"man!\", \"What's\", \"Up?\")\n\nHey man! What's Up?"
+  },
+  {
+    "objectID": "posts/print/index.html#combining-strings-integers-decimals",
+    "href": "posts/print/index.html#combining-strings-integers-decimals",
+    "title": "Playing With The print Command",
+    "section": "Combining Strings, Integers, & Decimals",
+    "text": "Combining Strings, Integers, & Decimals\nLet me try passing all three inside the print() command.\n\nprint(\"Python\", 77, -9.14)\n\nPython 77 -9.14\n\n\nWorks well! It is displaying all three."
+  },
+  {
+    "objectID": "posts/print/index.html#common-mistakes",
+    "href": "posts/print/index.html#common-mistakes",
+    "title": "Playing With The print Command",
+    "section": "Common Mistakes",
+    "text": "Common Mistakes\nLet me look at a few common mistakes that I might do with a simple command as print().\nIf incase, my print() commands throws an error, it might be due to the following two mistakes. However, there are other mistakes as well apart from these two.\n\nMistake 1: Mispelling print\nThe print command doesn’t work with other spelling formations, such as the following:\n\nPRINT(\"Hi\")\n\nNameError: ignored\n\n\n\nPrint(\"Hi\")\n\nNameError: ignored\n\n\nAll the other variations throw an error.\n\n\nMistake 2: Using Other Bracket Styles in print()\nThe brackets within which I pass my string or number must be a parenthesis (). Other brackets are not allowed such as the following.\n\nSquare Brackets []\n\nprint[\"Hello\"]\n\nTypeError: ignored\n\n\n\n\nFlower/Curly Brackets {}\n\nprint{\"Hi\"}\n\nSyntaxError: ignored\n\n\n\n\nAngular Brackets &lt;&gt;\n\nprint&lt;\"Hi\"&gt;\n\nSyntaxError: ignored"
+  },
+  {
+    "objectID": "posts/print/index.html#emojis",
+    "href": "posts/print/index.html#emojis",
+    "title": "Playing With The print Command",
+    "section": "Emojis",
+    "text": "Emojis\nLet me wrap my print() adventures with some emojis.\nHere is how I can display emojis:\n\nprint('\\N{grinning face}')\n\n😀\n\n\n\nprint('\\N{smiling face with halo}')\n\n😇\n\n\n\nprint(\"\\N{see-no-evil monkey}\")\n\n🙈\n\n\n\nprint(\"\\N{tent}\")\n\n⛺\n\n\n\nprint(\"I need a\", \"\\N{taxi}\")\n\nI need a 🚕\n\n\n\nprint('\\N{snowman}')\n\n☃\n\n\nHere is a list of all emojis. I inserted the descriptions mentioned in CLDR Short Name column. Some stuff didn’t seem to work.\n\nprint(\"That's a wrap!\", \"\\N{eyes}\")\n\nThat's a wrap! 👀"
   }
 ]

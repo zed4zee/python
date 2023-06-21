@@ -2,10 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://zed4zee.github.io/python/posts/background/index.html</loc>
-    <lastmod>2023-06-20T13:51:06.478Z</lastmod>
+    <lastmod>2023-06-20T13:58:24.228Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zed4zee.github.io/python/notes.html</loc>
+    <lastmod>2023-06-20T13:58:24.468Z</lastmod>
   </url>
   <url>
     <loc>https://zed4zee.github.io/python/index.html</loc>
-    <lastmod>2023-06-20T13:51:58.028Z</lastmod>
+    <lastmod>2023-06-21T14:13:41.946Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zed4zee.github.io/python/posts/print/index.html</loc>
+    <lastmod>2023-06-21T14:13:41.576Z</lastmod>
   </url>
 </urlset>
