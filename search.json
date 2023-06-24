@@ -1,5 +1,131 @@
 [
   {
+    "objectID": "posts/variables/index.html",
+    "href": "posts/variables/index.html",
+    "title": "Variables",
+    "section": "",
+    "text": "My favorite number is \\(76547388754839847\\). I can display it as follows:\nprint(76547388754839847)\n\n7\nI have seen this earlier.\nWhat if I want to somehow store this number somewhere, so that instead of typing it again later in my code, I can just refer the place where I have stored it?!\nThis can be done in Python with the following modifcation.\na = 76547388754839847\nprint(76547388754839847)\n\n76547388754839847\nThe first line resembles mathematics, it is like an equation. The a is like a variable and 76547388754839847 is like a constant.\nRecall that in math, in order to declare a variable (say \\(a\\)) and assign a value to it (say \\(76547388754839847\\)), \\(a = 76547388754839847\\) is written. The \\(=\\) symbol is used to assign the value \\(76547388754839847\\) to the variable \\(a\\).\nLikewise, in programming, to perform the exact same thing, I have to type a = 76547388754839847. The = symbol is called an assignment operator, which basically assigns a value to a variable. This shall be explored ahead in detail.\nOnce I have declared and assigned a value to my variable, the variable acts like a container that stores that value. The stored value becomes the value of the variable.\nIn second line, hence, when I ask the computer to display a, it is displaying its stored value which is 76547388754839847.\nLet me try other type of values.\nb = 9.78\nprint(b)\n\n9.78\nc = 'i love pizza'\nprint(c)\n\ni love pizza\nI get the idea now.\nNote that the following two things are happening simultaneously, when we type x = 10, for example\nLet me see if I can separate these two.\nx\nx = 10\nprint(x)\n\nNameError: ignored\nOops!\nLooks like I can not just declare a variable separately. I need to assign a value to it.\nHere is a problem, what if I want to define some variable, like age and just use it later. Can I do this?! Or should I by default store some value and sort of update it later? I need to find out.\nAnyways, let us come back!"
+  },
+  {
+    "objectID": "posts/variables/index.html#variables-literals",
+    "href": "posts/variables/index.html#variables-literals",
+    "title": "Variables",
+    "section": "Variables & Literals",
+    "text": "Variables & Literals\nIn mathematics, there was a concept of a variable and a constant.\nA variable was something whose value can be changed and constant was something whose value remains fixed, like the number \\(5\\), for example. No matter wherever and under any circumstance, when I write the number \\(5\\), its value is the same. A variable on the other hand were represented by these letters, like \\(x\\), \\(y\\), or \\(z\\). They can have any value based on what I assign to them. If I write \\(x = 5\\), the value of \\(x\\) will be \\(5\\), but if I write \\(x=-98\\), its value changess to \\(-98\\).\nIn CS, similar ideas exist. A variable is called a variable, but a constant is called as a literal in programming.\nStrings like hello, world, and numbers like 5, or -98 are all literals. The variables on the other hand are like a container that stores literals inside it.\nOnce a variable stores a specific value, it gets equipped with all the characteristics of that value.\nConsider the following:\n\ni = 10\nprint(i)\nf = 8.9\nprint(f)\ns = 'python'\nprint(s)\nb1 = True\nprint(b1)\nb2 = False\nprint(b2)\n\n10\n8.9\npython\nTrue\nFalse\n\n\nEach of the variables store a different type of value. Hence, if we ask Python the type of the variable, it will essentially, tell us the type of the value that is stored in it. The variables possess the characteristics of its values.\nLet us use the type() command on the variable.\n\nprint(type(i))\n\n&lt;class 'int'&gt;\n\n\nIt is saying that the variable i of the type int as expected.\nNote that, when it says that that variable i is of the type int, it essentially is referrring to the value it stores.\nI need to get this through my head that variables are just like containers, and when we use them in code, we are essentially dealing with the value it stores.\nAnyways, let me try checking the type of other variables.\n\nprint(type(f))\nprint(type(s))\nprint(type(b1))\nprint(type(b2))\n\n&lt;class 'float'&gt;\n&lt;class 'str'&gt;\n&lt;class 'bool'&gt;\n&lt;class 'bool'&gt;\n\n\nSame as expected.\nNOTE: integer, decimal, and string is described by Python as int, float, and str respectively.\n\nprint(\"'i' is of type:\", type(i))\nprint(\"'f' is of type:\", type(f))\nprint(\"'s' is of type:\", type(s))\nprint(\"'b1' is of type: \", type(b1))\nprint(\"'b2' is of type: \", type(b2))\n\n'i' is of type: &lt;class 'int'&gt;\n'f' is of type: &lt;class 'float'&gt;\n's' is of type: &lt;class 'str'&gt;\n'b1' is of type:  &lt;class 'bool'&gt;\n'b2' is of type:  &lt;class 'bool'&gt;"
+  },
+  {
+    "objectID": "posts/data-types/index.html",
+    "href": "posts/data-types/index.html",
+    "title": "Oh! The Types Of Data",
+    "section": "",
+    "text": "When playing around with the print() command, I tried to display different types of things. I displayed integer numbers like 10, decimal numbers like 1.5, and words or sentences like Apple or Hi, how are you?, which were called as strings.\nCan Python itself distinguish and know these different types?! Let me find out!\nIn order to do this, there is a function called type() that I will use, which takes any data value as input and returns its type."
+  },
+  {
+    "objectID": "posts/data-types/index.html#integer",
+    "href": "posts/data-types/index.html#integer",
+    "title": "Oh! The Types Of Data",
+    "section": "Integer",
+    "text": "Integer\n\nprint(type(10))\n\n&lt;class 'int'&gt;\n\n\nIgnoring the cryptic symbols, it is saying that the value 10 is of the type int, which is a shortform for an integer. Sounds about right! Let me try other values."
+  },
+  {
+    "objectID": "posts/data-types/index.html#decimals",
+    "href": "posts/data-types/index.html#decimals",
+    "title": "Oh! The Types Of Data",
+    "section": "Decimals",
+    "text": "Decimals\n\nprint(type(1.5))\n\n&lt;class 'float'&gt;\n\n\nPython interprets a decimal number as a float. A float or a floating number is a number that has a decimal part along with the integer part.\nDecimal numbers like 0.2, -9.765, 3.14, etc are all floating numbers or simply a float from computer’s perspective.\n\nprint(type(0.2))\nprint(type(-9.765))\nprint(type(3.14))\n\n&lt;class 'float'&gt;\n&lt;class 'float'&gt;\n&lt;class 'float'&gt;"
+  },
+  {
+    "objectID": "posts/data-types/index.html#strings",
+    "href": "posts/data-types/index.html#strings",
+    "title": "Oh! The Types Of Data",
+    "section": "Strings",
+    "text": "Strings\nNext up let us try how Python understands our strings like Apple.\n\nprint(type(\"Apple\"))\n\n&lt;class 'str'&gt;\n\n\nPython says that Apple is of type str, which is a short form of string.\nThis is all cool.\nA question that I can ask is are there any other types of data?! Or is it just these 3, int, float, and str?!"
+  },
+  {
+    "objectID": "posts/data-types/index.html#boolean",
+    "href": "posts/data-types/index.html#boolean",
+    "title": "Oh! The Types Of Data",
+    "section": "Boolean",
+    "text": "Boolean\nTurns out we have another data type as well called as a boolean data type. They take only two values, unline the above 3, which take, infinite values. The two values they take are True and False, with the capital letters.\nLet me try these.\n\nprint(type(True))\nprint(type(False))\n\n&lt;class 'bool'&gt;\n&lt;class 'bool'&gt;\n\n\nNice, bool is a short form for boolean.\nThese data types are very useful in situations were binary stuff like True/False, 0/1, etc are required. This will be expl…"
+  },
+  {
+    "objectID": "posts/data-types/index.html#a-closer-look.",
+    "href": "posts/data-types/index.html#a-closer-look.",
+    "title": "Oh! The Types Of Data",
+    "section": "A Closer Look.",
+    "text": "A Closer Look.\nI have never specified the computer or Python the type of value I was using. I just went ahead and used them. It seems like the computer has automatically recognized this. Now why would it do that?! The answer is as follows.\nImagine if I had to create some containers, one for storing rice and the other for storing some liquid, for example. Both of these containers must have different physical properties and charecteristics. A rice container should be free of moisture.\nThe computer does a similar thing when storing data in its memory. It just doesn’t store any data in any memory structure or container so to stay. WHenever a value is given, it first recognizes its type and creates a special kind of container based on its nature. Without getting too much technical, what it does is some tweaking in the memory. int is stored differently inside the memory when compared to float and str.\nHence, it has to know the type of data it is thrown at and we can know what it is knowing with the type() command.\nI will look into this in detail later."
+  },
+  {
+    "objectID": "posts/type-casting/index.html",
+    "href": "posts/type-casting/index.html",
+    "title": "Type Conversion/Type Casting",
+    "section": "",
+    "text": "I can convert all 4 data types from one type to another. Following are the possibilities."
+  },
+  {
+    "objectID": "posts/type-casting/index.html#converting-things-into-int",
+    "href": "posts/type-casting/index.html#converting-things-into-int",
+    "title": "Type Conversion/Type Casting",
+    "section": "1 Converting Things Into int",
+    "text": "1 Converting Things Into int\nWe are going to convert the data types float, str, and bool into int type. Look at the following:\n\na = int(5.7)\nb = int('10')\nc = int(True)\nd = int(False)\nprint(a, type(a))\nprint(b, type(b))\nprint(c, type(c))\nprint(d, type(d))\n\n5 &lt;class 'int'&gt;\n10 &lt;class 'int'&gt;\n1 &lt;class 'int'&gt;\n0 &lt;class 'int'&gt;\n\n\nLet me break this down.\nIn the above lines, I have taken a different data type and asked the computer to convert it into an integer by passing it inside int(). The converted values are stored in the respective variables. Looks like each of the conversions are done differently. Let me examine each of them separately.\n\nfloat to int\nWhen a float type is converted into an int type, the decimal goes away and just the whole part of stays.\n\n\nstr to int\nOnly Strings that are numbers can be converted into int types. The following doesn’t work.\n\nx = int('hello')\nprint(x, type(x))\n\nValueError: ignored\n\n\n\n\nbool to int\nThe boolean value True is converted into an int as 1 and False is converted as 0."
+  },
+  {
+    "objectID": "posts/type-casting/index.html#converting-things-into-str",
+    "href": "posts/type-casting/index.html#converting-things-into-str",
+    "title": "Type Conversion/Type Casting",
+    "section": "2 Converting Things Into str",
+    "text": "2 Converting Things Into str\nNow, I am going to convert the data types int, float, and bool into str type.\n\na = str(5)\nb = str(7.9)\nc = str(True)\nd = str(False)\nprint(a, type(a))\nprint(b, type(b))\nprint(c, type(c))\nprint(d, type(d))\n\n5 &lt;class 'str'&gt;\n7.9 &lt;class 'str'&gt;\nTrue &lt;class 'str'&gt;\nFalse &lt;class 'str'&gt;\n\n\nThis one seems pretty straightforward. All the values in terms of the structure are same but just the data type is changed."
+  },
+  {
+    "objectID": "posts/type-casting/index.html#converting-things-into-float",
+    "href": "posts/type-casting/index.html#converting-things-into-float",
+    "title": "Type Conversion/Type Casting",
+    "section": "3 Converting Things Into float",
+    "text": "3 Converting Things Into float\nWe are going to convert the data types int, str, and bool into float type. Look at the following:\n\na = float(13)\nb = float('10.31')\nc = float(True)\nd = float(False)\nprint(a, type(a))\nprint(b, type(b))\nprint(c, type(c))\nprint(d, type(d))\n\n13.0 &lt;class 'float'&gt;\n10.31 &lt;class 'float'&gt;\n1.0 &lt;class 'float'&gt;\n0.0 &lt;class 'float'&gt;\n\n\nLet me break this down.\n\nint to float\nWhen a int type is converted into a float type, a decimal part is added right after the whole part.\n\n\nstr to float\nAgain only strings that look like numbers can be converted into float. The following doesn’t work.\n\nx = float('hello')\nprint(x, type(x))\n\nValueError: ignored\n\n\n\n\nbool to float\nThe boolean value True is converted into an float as 1.0 and False is converted as 0.0."
+  },
+  {
+    "objectID": "posts/type-casting/index.html#converting-things-into-bool",
+    "href": "posts/type-casting/index.html#converting-things-into-bool",
+    "title": "Type Conversion/Type Casting",
+    "section": "4 Converting Things Into bool",
+    "text": "4 Converting Things Into bool\nWe are going to convert the data types int, float, and str into bool type. Look at the following:\n\na = bool(5)\nb = bool(9.8)\nc = bool('True')\nd = bool('False')\ne = bool('0')\nprint(a, type(a))\nprint(b, type(b))\nprint(c, type(c))\nprint(d, type(d))\nprint(e, type(e))\n\nTrue &lt;class 'bool'&gt;\nTrue &lt;class 'bool'&gt;\nTrue &lt;class 'bool'&gt;\nTrue &lt;class 'bool'&gt;\nTrue &lt;class 'bool'&gt;\n\n\nDamn! All are converted into bool as True. Even the strings False and 0!\nWhen will they be false?! Turns out only in the following situations:\n\na = bool(0)\nb = bool(0.0)\nc = bool('')\nprint(a, type(a))\nprint(b, type(b))\nprint(c, type(c))\n\nFalse &lt;class 'bool'&gt;\nFalse &lt;class 'bool'&gt;\nFalse &lt;class 'bool'&gt;\n\n\nIn the third line I have basically passed an empty string. It has no characters.\nLooks like all null values are converted as False. Let me wrap this up.\n\nint to bool\nAll int values except 0 are converted into bool as True. Only 0 is False.\n\n\nfloat to bool\nAll float values except 0.0 are converted into bool as True. Only 0.0 is False.\n\n\nstr to bool\nAll str values except '' (or \"\") are converted into bool as True. Only '' (or \"\") is False."
+  },
+  {
+    "objectID": "posts/operators/index.html",
+    "href": "posts/operators/index.html",
+    "title": "Operators",
+    "section": "",
+    "text": "Let me begin by goofing around and then study this in a systematic way.\na = 10\nb = 5\nn = a + b\nprint(n)\n\n15\nThe + symbol is adding the values stored in a and b. This is called as an operator. We have other operators as well.\na = 10\nb = 5\nn = a - b\nprint(n)\n\n5\na = 10\nb = 5\nn = a * b\nprint(n)\n\n50\nFor multiplication we use the * symbol in programming. Here is division.\na = 10\nb = 5\nn = a / b\nprint(n)\n\n2.0\nNote that, when two integers are divided, Python gives the result by default as a float type.\nLet me try other numbers.\nprint(2.3 * 4.99)\nprint(96 / 2.5)\nprint(3.56 + 9)\nprint(-67 + 34)\n\n11.477\n38.4\n12.56\n-33\nLet me take a closer look into this.\nIn Python there are many operators. All of them classified into 3 categories as follows:"
+  },
+  {
+    "objectID": "posts/operators/index.html#arithmetic-operators",
+    "href": "posts/operators/index.html#arithmetic-operators",
+    "title": "Operators",
+    "section": "1 Arithmetic Operators",
+    "text": "1 Arithmetic Operators\nFollowing is the list of various arithmetic operator symbols with their corresponding operation.\n\n\n\nSymbol\nOperation\n\n\n\n\n+\nAddition\n\n\n-\nSubtraction\n\n\n*\nMultiplication\n\n\n/\nDivision\n\n\n//\nFloor Division\n\n\n%\nModulo\n\n\n**\nExponentiation\n\n\n\nLet me try each of these.\n\nprint(10 + 5)\n\n15\n\n\n\nprint(10 - 5)\n\n5\n\n\n\nprint(10 * 5)\n\n50\n\n\n\nprint(10 / 5)\n\n2.0\n\n\n\nprint(10 // 5)\n\n2\n\n\n// is called the floor division operator.\nx // y gives the quotient when x is divided by y.\nExample: 8 // 3 is 2.\n\nprint(10 % 5)\n\n0\n\n\n% is called the modulus operator.\nx % y gives the remainder when x is divided by y.\nExample: 10 % 3 is 1.\n\nprint(10 ** 5)\n\n100000\n\n\n** is called the exponentiation operator.\nx ** y returns \\(x^y\\).\nExample: 3 ** 2 is 9.\n\n\n\n\n\n\nNote\n\n\n\n/ and // are two different operators. / gives the complete result of division, while // returns the quotient. For example, 5 / 2 results in 2.5 while 5 // 2 gives 2.\n\n\n\nBinary & Unary Operators\nThe above operators are called as binary operators because they are operated on two values. The two values on which they are operated are called as operands.\nUnary operators on the other hand are operated on only one operand. There are two of these:\n\nUnary Plus +\nUnary Minus -\n\nLook at the following:\n\nprint(- 2)\nprint(+ 2)\n\n-2\n2\n\n\nIn simple words they are like signs before a number.\n\nprint(- 9.76)\nprint(+ 123.56)\n\n-9.76\n123.56\n\n\nThe symbols + and - are thus used for both binary and unary operands. Based on the context, I have to make sense of what is going on.\n\nprint(10 - 2) # Binary minus\nprint(- 2) # Unary minus\n\n8\n-2\n\n\nBoth of them can be used as well.\n\nprint(10 - - 2) # Both, first is binary minus and second is unary minus\n\n12\n\n\nThis is equivalent to \\(10 - (-2)\\).\n\n\n\n\n\n\nNote\n\n\n\nThe operands can be both literals and variables."
+  },
+  {
+    "objectID": "posts/operators/index.html#relational-operators",
+    "href": "posts/operators/index.html#relational-operators",
+    "title": "Operators",
+    "section": "2 Relational Operators",
+    "text": "2 Relational Operators\nApart from the arithmetic operators there are these operators that evaluate the relationship between values.\n\n\n\nSymbol\nOperation\n\n\n\n\n&gt;\ngreater than\n\n\n&lt;\nless than\n\n\n&gt;=\ngreater than or equal to\n\n\n&lt;=\nless than or equal to\n\n\n==\ndouble equal to\n\n\n!=\nnot equal to\n\n\n\nThese operators are binary and they output only a boolean value True or False based on the truth or falsehood of a relationship.\nConsider the following:\n\nprint(10 &gt; 5)\n\nTrue\n\n\n\nprint(10 &lt; 5)\n\nFalse\n\n\n\nprint(10 &gt;= 5)\n\nTrue\n\n\n\nprint(10 &lt;= 5)\n\nFalse\n\n\n\nprint(10 == 5)\n\nFalse\n\n\n\nprint(10 != 5)\n\nTrue\n\n\nSince values can be stored in variables, I can do the following as well:\n\nx = 10\ny = 20\nz = y &gt; x\nprint(z)\n\nTrue\n\n\n\nDifference Between == & =\nNote that == and = are not the same. Both of them serve a different purpose.\n== operator checks if the two values are equal and outputs the boolean value. It is an equality operator.\n= operator 1) assigns a value to a new variable or 2) updates the value of the previous variable. It is an assignment operator.\n\nx = 5\nprint(x)\nx = x + 1\nprint(x)\nx = x + 1\nprint(x)\n\n5\n6\n7\n\n\nIn the first line I have assigned the value 5 to the variable x using the assignment operator =. By printing its value, we get 5.\nIn the next lines, I am updating the value of x as x + 1. This doesn’t make sense in math, but in CS it makes perfect sense. The line x = x + 1 is read from the RHS as follows.\n\nTake the previous value of x(5) and add 1 to it.\nThis results in 6.\nStore this new value in x itself by updating its previous value.\n\nWe can update however we like:\n\ny = 100\nprint(y)\ny = y / 10\nprint(y)\ny = y + 5\nprint(y)\ny = int(y)\nprint(y)\n\n100\n10.0\n15.0\n15"
+  },
+  {
+    "objectID": "posts/operators/index.html#logical-operator",
+    "href": "posts/operators/index.html#logical-operator",
+    "title": "Operators",
+    "section": "3 Logical Operator",
+    "text": "3 Logical Operator\nComing to our last category, we have the following:\n\n\n\nOperator\nOperation\n\n\n\n\nnot\nnegation\n\n\nand\nconjunction\n\n\nor\ndisjunction\n\n\n\nand and or are binary operators whereas not is a unary operator.\n\nand\n\nprint(True and True)\nprint(True and False)\nprint(False and True)\nprint(False and False)\n\nTrue\nFalse\nFalse\nFalse\n\n\n\n\nor\n\nprint(True or True)\nprint(True or False)\nprint(False or True)\nprint(False or False)\n\nTrue\nTrue\nTrue\nFalse\n\n\n\n\nnot\n\na = True\nprint(not a)\n\nFalse\n\n\nNegates the value of a. It can be written with parenthesis as well:\n\nb = False\nprint(not(b))\n\nTrue"
+  },
+  {
+    "objectID": "posts/operators/index.html#to-explore-later",
+    "href": "posts/operators/index.html#to-explore-later",
+    "title": "Operators",
+    "section": "To Explore Later",
+    "text": "To Explore Later\nNow that I have looked at all of this, let me think and explore the following:\n\nThe appropriate operands that go well with each of the above operators.\nClear understanding of the type of output that comes with each operator\n(and so on)\n\nLet me just jot down some stuff here.\nFor all the arithmentic operators, the operands with which I played around were int and float types.\n\na = 5\nb = 10\nc = a + b\nprint(c)\n\n15\n\n\n\na = 6.7\nb = -9.8\nc = a + b\nprint(c)\n\n-3.1000000000000005\n\n\nWhat the hell is this?!:\n\na = 'apple'\nb = 'ball'\nc = a + b\nprint(c)\n\nappleball\n\n\nTurns out I can use strings as well, with the + operator. When used, it is combining the two strings one after the other.\nIn CS, this is called as concatenation.\nSo you see, I need to figure out what all works for other type of operators as well. Look at this for example.\n\nprint(5 and 7)\n\n7\n\n\nWhat is happening here?!\n\nGOAL: Get a clear idea of the list of operands that go well and the list of outputs that we get."
+  },
+  {
     "objectID": "posts/print/index.html",
     "href": "posts/print/index.html",
     "title": "Playing With The print Command",
@@ -96,6 +222,27 @@
     "title": "Playing With The print Command",
     "section": "Emojis",
     "text": "Emojis\nLet me wrap my print() adventures with some emojis.\nHere is how I can display emojis:\n\nprint('\\N{grinning face}')\n\n😀\n\n\n\nprint('\\N{smiling face with halo}')\n\n😇\n\n\n\nprint(\"\\N{see-no-evil monkey}\")\n\n🙈\n\n\n\nprint(\"\\N{tent}\")\n\n⛺\n\n\n\nprint(\"I need a\", \"\\N{taxi}\")\n\nI need a 🚕\n\n\n\nprint('\\N{snowman}')\n\n☃\n\n\nHere is a list of all emojis. I inserted the descriptions mentioned in CLDR Short Name column. Some stuff didn’t seem to work.\n\nprint(\"That's a wrap!\", \"\\N{eyes}\")\n\nThat's a wrap! 👀"
+  },
+  {
+    "objectID": "posts/code-interactivity/index.html",
+    "href": "posts/code-interactivity/index.html",
+    "title": "Code Interactivity",
+    "section": "",
+    "text": "What I have seen so far was printing stuff that I wanted to put. There was no interactivity with another user. In order to do this we need to take inputs from a user. This will be explored now.\nConsider the following code:\nprint(\"Enter a number: \")\nn = input()\nprint(n)\n\nEnter a number: \n100\n100\nThe first line is the usual one that prints a message Enter a number:. At this point in order to make my code interactive, it would be better if I can make the user enter a number s/he wishes. To do that I must ask the computer to do something like take an input from the user. In order to do this I use n = input() in the second line. which is a way of telling the computer to do the following:\nWhen the computer runs this line, it waits for the user to enter an input by prompting it. It doesn’t move ahead untill the user enters a number and presses enter.\nOnce this is done, since the value is stored in the variable n, I can just print it, which is what I have done.\nA question that can be asked here is, what if the user doesn’t enter a number but enters a string?!\nLet me try that.\nprint(\"Enter a number: \")\nn = input()\nprint(n)\n\nEnter a number: \nHello\nHello\nSeems like our input() command is accepting any type of data the user inputs. Wait a second! Is it treating all of them as str types?!\nLet me do a quick check!\nprint(\"Enter a number: \")\nn = input()\nprint(n)\nprint(type(n))\n\nEnter a number: \n100\n100\n&lt;class 'str'&gt;\nOh no! It is treating everything as a str.\nIn order to change this and prompt the user a specific type of data, I need to make the following modification.\nprint(\"Enter a number: \")\nn = int(input())\nprint(n)\n\nEnter a number: \n100\n100\nNow, the computer does the following:\nThis way, the computer recasts, the input value from a string to an integer. All the recasting concepts can be applied here based on the needs.\nLEt me play with this a lil’ bit.\nprint(\"Hello! What is your name?\")\nn = str(input())\nprint(n)\n\nHello! What is your name?\nZeeshan\nZeeshan\nSince I have asked the user for a name, it must be of the type str, that is why I asked it to convert the input as an str. I need not have put that because as we have seen above, by default with just the input() bit it takes strings as inputs.\nprint(\"Hello! What is your name?\")\nn = str(input())\nprint(\"Hello\", n)\n\nHello! What is your name?\nZeeshan\nHello Zeeshan\nprint(\"Hello! What is your name?\")\nn = str(input())\nprint(\"Hello\", n, \"How are you?\")\n\nHello! What is your name?\nZeeshan\nHello Zeeshan How are you?\nprint(\"Hello! What is your name?\")\nn = str(input())\nprint(\"Where are you staying?\")\np = str(input())\nprint(\"Hello\", n, \"How is the weather in\", p, \"?\")\n\nHello! What is your name?\nZeeshan\nWhere are you staying?\nHyderabad\nHello Zeeshan How is the weather in Hyderabad ?\nprint(\"Hello! What is your name?\")\nn = str(input())\nprint(\"Where are you staying?\")\np = str(input())\nprint(\"Hello\", n, \"How is the weather in\", p, \"?\")\nprint(\"What is your age?\")\nage = int(input())\nprint(\"Good to know you are\", age, \"years old!\")\n\nHello! What is your name?\nZeeshan\nWhere are you staying?\nHyderabad\nHello Zeeshan How is the weather in Hyderabad ?\nWhat is your age?\n90\nGood to know you are 90 years old!"
+  },
+  {
+    "objectID": "posts/code-interactivity/index.html#merging-print-and-inputs-in-a-single-command",
+    "href": "posts/code-interactivity/index.html#merging-print-and-inputs-in-a-single-command",
+    "title": "Code Interactivity",
+    "section": "Merging print and inputs in a single command",
+    "text": "Merging print and inputs in a single command\nInstead doing the following separately:\n\nprint(\"Enter a number: \")\nn = int(input())\n\nEnter a number: \n8\n\n\nI can merge as follows:\n\nn = int(input(\"Enter a number: \"))\n\nEnter a number: 8\n\n\nLet me remodify what I did earlier.\n\nn = str(input(\"Hello! What is your name?\"))\np = str(input(\"Where do you stay\"))\nprint(\"Hello\", n, \"How is the weather in\", p)\nage = int(input(\"How old are you?\"))\nprint(\"Good to know you are\", age, \"years old!\")\n\nHello! What is your name?Zeeshan\nWhere do you stayHyderabad\nHello Zeeshan How is the weather in Hyderabad\nHow old are you?90\nGood to know you are 90 years old!\n\n\nLooks good!\nHowever, I cannot pass multiple strings.\n\nn = str(input(\"Hello\", \"What is your name?\"))\n\nTypeError: ignored\n\n\nI can pass numbers as well. But again only one.\n\nn = str(input(100))\n\n100Hundred"
+  },
+  {
+    "objectID": "posts/code-interactivity/index.html#area-of-circle",
+    "href": "posts/code-interactivity/index.html#area-of-circle",
+    "title": "Code Interactivity",
+    "section": "Area Of Circle",
+    "text": "Area Of Circle\n\nr = int(input(\"Enter radius of a circle: \"))\na = 3.14 * r * r\nprint(\"Area of a circle with radius\", r, \"is\", a)\n\nEnter radius of a circle: 20\nArea of a circle with radius 20 is 1256.0"
   },
   {
     "objectID": "posts/background/index.html",
