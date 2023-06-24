@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Abdullah Zeeshan">
+<meta name="dcterms.date" content="2023-06-22">
+<meta name="description" content="Using the type() function.">
 
-<title>Re-learning how to code</title>
+<title>Oh! The Types Of Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,28 +23,60 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/favicon.jpg" rel="icon" type="image/jpeg">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/favicon.jpg" rel="icon" type="image/jpeg">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -62,38 +97,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-subtitle','listing-image','listing-date','listing-author','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -104,7 +108,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Abdullah Zeeshan</span>
     </a>
   </div>
@@ -115,7 +119,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./notes.html" rel="" target="">
+    <a class="nav-link" href="../../notes.html" rel="" target="">
  <span class="menu-text">Notes</span></a>
   </li>  
   <li class="nav-item compact">
@@ -124,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./index.xml" rel="" target=""><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -143,259 +147,138 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Re-learning how to code</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Oh! The Types Of Data</h1>
+            <p class="subtitle lead">Exploring various data types in Python</p>
+                  <div>
+        <div class="description">
+          Using the <code>type()</code> function.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">coding</div>
+              </div>
+                  </div>
   </div>
     
   
   <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Abdullah Zeeshan </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">June 22, 2023</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="announcement">announcement <span class="quarto-category-count">(1)</span></div><div class="category" data-category="coding">coding <span class="quarto-category-count">(6)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#integer" id="toc-integer" class="nav-link active" data-scroll-target="#integer">Integer</a></li>
+  <li><a href="#decimals" id="toc-decimals" class="nav-link" data-scroll-target="#decimals">Decimals</a></li>
+  <li><a href="#strings" id="toc-strings" class="nav-link" data-scroll-target="#strings">Strings</a></li>
+  <li><a href="#boolean" id="toc-boolean" class="nav-link" data-scroll-target="#boolean">Boolean</a></li>
+  <li><a href="#a-closer-look." id="toc-a-closer-look." class="nav-link" data-scroll-target="#a-closer-look.">A Closer Look.</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
-<section id="posts" class="level2">
-<h2 class="anchored" data-anchor-id="posts">Posts</h2>
-
+<p><img src="data_types.jpg" class="img-fluid"></p>
+<p>When playing around with the <code>print()</code> command, I tried to display different types of things. I displayed <em>integer</em> numbers like <code>10</code>, <em>decimal</em> numbers like <code>1.5</code>, and words or sentences like <code>Apple</code> or <code>Hi, how are you?</code>, which were called as <em>strings</em>.</p>
+<p>Can Python itself distinguish and know these different types?! Let me find out!</p>
+<p>In order to do this, there is a function called <code>type()</code> that I will use, which takes any data value as input and returns its type.</p>
+<section id="integer" class="level2">
+<h2 class="anchored" data-anchor-id="integer">Integer</h2>
+<div class="cell" data-outputid="a37b6951-28c8-4e26-c919-d98462be50b4">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(<span class="dv">10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'int'&gt;</code></pre>
+</div>
+</div>
+<p>Ignoring the cryptic symbols, it is saying that the value <code>10</code> is of the type <code>int</code>, which is a shortform for an <em>integer</em>. Sounds about right! Let me try other values.</p>
+</section>
+<section id="decimals" class="level2">
+<h2 class="anchored" data-anchor-id="decimals">Decimals</h2>
+<div class="cell" data-outputid="4ccb0cc1-6f7f-4d52-c147-f393b2a92df2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(<span class="fl">1.5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'float'&gt;</code></pre>
+</div>
+</div>
+<p>Python interprets a <em>decimal</em> number as a <code>float</code>. A <em>float</em> or a <em>floating number</em> is a number that has a decimal part along with the integer part.</p>
+<p>Decimal numbers like <code>0.2</code>, <code>-9.765</code>, <code>3.14</code>, etc are all <em>floating numbers</em> or simply a <code>float</code> from computer’s perspective.</p>
+<div class="cell" data-outputid="0d4350b2-603b-41d0-b78b-b80fd501e715">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(<span class="fl">0.2</span>))</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(<span class="op">-</span><span class="fl">9.765</span>))</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(<span class="fl">3.14</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'float'&gt;
+&lt;class 'float'&gt;
+&lt;class 'float'&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="strings" class="level2">
+<h2 class="anchored" data-anchor-id="strings">Strings</h2>
+<p>Next up let us try how Python understands our strings like <code>Apple</code>.</p>
+<div class="cell" data-outputid="106d8a11-f27e-4a55-a988-5cb30a637410">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(<span class="st">"Apple"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'str'&gt;</code></pre>
+</div>
+</div>
+<p>Python says that <code>Apple</code> is of type <code>str</code>, which is a short form of <em>string</em>.</p>
+<p>This is all cool.</p>
+<p>A question that I can ask is are there any other types of data?! Or is it just these 3, <code>int</code>, <code>float</code>, and <code>str</code>?!</p>
+</section>
+<section id="boolean" class="level2">
+<h2 class="anchored" data-anchor-id="boolean">Boolean</h2>
+<p>Turns out we have another data type as well called as a <em>boolean</em> data type. They take only two values, unline the above 3, which take, infinite values. The two values they take are <code>True</code> and <code>False</code>, <em>with</em> the capital letters.</p>
+<p>Let me try these.</p>
+<div class="cell" data-outputid="b32e5eeb-1b6e-4691-cc0e-3c3827248c42">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(<span class="va">True</span>))</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(<span class="va">False</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'bool'&gt;
+&lt;class 'bool'&gt;</code></pre>
+</div>
+</div>
+<p>Nice, <code>bool</code> is a short form for <em>boolean</em>.</p>
+<p>These data types are very useful in situations were binary stuff like True/False, 0/1, etc are required. This will be expl…</p>
+</section>
+<section id="a-closer-look." class="level2">
+<h2 class="anchored" data-anchor-id="a-closer-look.">A Closer Look.</h2>
+<p>I have never specified the computer or Python the <em>type</em> of value I was using. I just went ahead and used them. It seems like the computer has automatically recognized this. Now why would it do that?! The answer is as follows.</p>
+<p>Imagine if I had to create some containers, one for storing rice and the other for storing some liquid, for example. Both of these containers must have different physical properties and charecteristics. A rice container should be free of moisture.</p>
+<p>The computer does a similar thing when storing data in its memory. It just doesn’t store any data in any memory structure or container so to stay. WHenever a value is given, it first recognizes its type and creates a special kind of container based on its nature. Without getting too much technical, what it does is some tweaking in the memory. <code>int</code> is stored differently inside the memory when compared to <code>float</code> and <code>str</code>.</p>
+<p>Hence, it has to know the type of data it is thrown at and we can know what it is knowing with the <code>type()</code> command.</p>
+<p>I will look into this in detail later.</p>
 
 
 </section>
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
-     </select>
-  </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="coding" data-listing-date-sort="1687458600000" data-listing-file-modified-sort="1687620793636" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
-<div class="thumbnail">
-<p><a href="./posts/operators/index.html"> <p class="card-img-top"><img src="posts/operators/operators.jpg"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./posts/operators/index.html">
-<h3 class="no-anchor listing-title">
-Operators
-</h3>
-<div class="listing-subtitle">
-Arithmetic, Relational, &amp; Logical
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/operators/index.html">
-<div class="listing-date">
-23 June 2023
-</div>
-<div class="listing-author">
-Abdullah Zeeshan
-</div>
-<div class="listing-reading-time">
-4 min
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="coding" data-listing-date-sort="1687372200000" data-listing-file-modified-sort="1687609673007" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<div class="thumbnail">
-<p><a href="./posts/code-interactivity/index.html"> <p class="card-img-top"><img src="posts/code-interactivity/input.jpg"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./posts/code-interactivity/index.html">
-<h3 class="no-anchor listing-title">
-Code Interactivity
-</h3>
-<div class="listing-subtitle">
-Taking inputs from the user
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/code-interactivity/index.html">
-<div class="listing-date">
-22 June 2023
-</div>
-<div class="listing-author">
-Abdullah Zeeshan
-</div>
-<div class="listing-reading-time">
-3 min
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="coding" data-listing-date-sort="1687372200000" data-listing-file-modified-sort="1687535389535" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<div class="thumbnail">
-<p><a href="./posts/data-types/index.html"> <p class="card-img-top"><img src="posts/data-types/data_types.jpg"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./posts/data-types/index.html">
-<h3 class="no-anchor listing-title">
-Oh! The Types Of Data
-</h3>
-<div class="listing-subtitle">
-Exploring various data types in Python
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/data-types/index.html">
-<div class="listing-date">
-22 June 2023
-</div>
-<div class="listing-author">
-Abdullah Zeeshan
-</div>
-<div class="listing-reading-time">
-3 min
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="coding" data-listing-date-sort="1687372200000" data-listing-file-modified-sort="1687609369167" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
-<div class="thumbnail">
-<p><a href="./posts/type-casting/index.html"> <p class="card-img-top"><img src="posts/type-casting/conversion.jpg"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./posts/type-casting/index.html">
-<h3 class="no-anchor listing-title">
-Type Conversion/Type Casting
-</h3>
-<div class="listing-subtitle">
-Converting data from one type to another
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/type-casting/index.html">
-<div class="listing-date">
-22 June 2023
-</div>
-<div class="listing-author">
-Abdullah Zeeshan
-</div>
-<div class="listing-reading-time">
-3 min
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="coding" data-listing-date-sort="1687372200000" data-listing-file-modified-sort="1687535855760" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
-<div class="thumbnail">
-<p><a href="./posts/variables/index.html"> <p class="card-img-top"><img src="posts/variables/jar.jpg"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./posts/variables/index.html">
-<h3 class="no-anchor listing-title">
-Variables
-</h3>
-<div class="listing-subtitle">
-Jars That Store Values
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/variables/index.html">
-<div class="listing-date">
-22 June 2023
-</div>
-<div class="listing-author">
-Abdullah Zeeshan
-</div>
-<div class="listing-reading-time">
-4 min
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="coding" data-listing-date-sort="1687285800000" data-listing-file-modified-sort="1687356792687" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
-<div class="thumbnail">
-<p><a href="./posts/print/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./posts/print/index.html">
-<h3 class="no-anchor listing-title">
-Playing With The print Command
-</h3>
-<div class="listing-subtitle">
-Day 1 of re-learning coding
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/print/index.html">
-<div class="listing-date">
-21 June 2023
-</div>
-<div class="listing-author">
-Abdullah Zeeshan
-</div>
-<div class="listing-reading-time">
-6 min
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="announcement" data-listing-date-sort="1687199400000" data-listing-file-modified-sort="1687366393676" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
-<div class="thumbnail">
-<p><a href="./posts/background/index.html"> <p class="card-img-top"><img src="posts/background/bad_coder.jpg"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./posts/background/index.html">
-<h3 class="no-anchor listing-title">
-I Am A Bad Coder
-</h3>
-<div class="listing-subtitle">
-And I want to do something about it
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/background/index.html">
-<div class="listing-date">
-20 June 2023
-</div>
-<div class="listing-author">
-Abdullah Zeeshan
-</div>
-<div class="listing-reading-time">
-2 min
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -2,6 +2,11 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/operators/index.html",
+      "/posts/code-interactivity/index.html",
+      "/posts/data-types/index.html",
+      "/posts/type-casting/index.html",
+      "/posts/variables/index.html",
       "/posts/print/index.html",
       "/posts/background/index.html"
     ]
